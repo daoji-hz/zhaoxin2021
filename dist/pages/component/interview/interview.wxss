@@ -1,0 +1,77 @@
+/* pages/component/interview/interview.wxss */
+@import "/img/img.wxss";
+@import "/font/font.wxss";
+
+.face {
+  position: absolute;
+  top: 31%;
+  left: 20%;
+}
+.face image {
+  width: 55rpx;
+  height: 55rpx;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.basicText {
+  width: 500rpx;
+}
+.Box {
+  /*如果不使用position,而是用margin来改变位置,会导致父元素也跟随移动.试了试解决的办法,但是因为在swiper-item中,好像会出bug,暂且先用position解决
+*/
+  position: relative;
+  top: 50%;
+  width: 100%;
+}
+.ladder {
+  background-size: 100% 100%;
+  height: 580rpx;
+  width: 180rpx;
+  position: absolute;
+  left: 16%;
+  top: -4.5%;
+}
+.inputBox {
+  width: 550rpx;
+  margin: 0 auto;
+  height: 495rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.interviewInputImg {
+  background-size: 100%;
+  height: 110rpx;
+  line-height: 110rpx;
+  width: 550rpx;
+  /*一开始设置inputBox margin居中的时候,看上去没有居中,是因为下面的Input太小了,可以在pickerBox上加align-item,或者将宽度设为相同*/
+}
+.pickerBox {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+.littleArrow {
+  height: 80rpx;
+  width: 80rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30rpx;
+}
+.littleArrow image {
+  height: 30rpx;
+  width: 50rpx;
+}
+.choiceMsg {
+  font-size: 40rpx;
+  margin-right: 30rpx;
+  font-family: "FZXS16";
+}
+.showMsg {
+  width: 260rpx;
+  font-size: 35rpx;
+}

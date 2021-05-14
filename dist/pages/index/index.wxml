@@ -1,0 +1,31 @@
+<!--index.wxml-->
+<view class="leftArrow" style="opacity: {{opacityLeftNum}}"></view>
+<view class="rightArrow" wx:if="{{isRightArrow}}" animation="{{animation}}" style="opacity: {{opacityRightNum}}"></view>
+<swiper class="container" bindchange="showArrows">
+  <!--如果使用了swiper组件,那么在index页面渲染的时候所有的组件其实都已经渲染完毕,也就不存在重新进入组件的问题了-->
+  <!--也就是说,在切换滑块的时候,把变量放在组件的生命周期中,是无效的,取不到那个传递过来的值-->
+  <!--就应该使用bindchange-->
+  <swiper-item>
+    <home></home>
+  </swiper-item>
+  <swiper-item>
+    <basicInfo id="basicInfo" userInfo="{{userInfo}}" bindcheckID="checkID" bindsync="sync"></basicInfo>
+  </swiper-item>
+  <swiper-item>
+    <primary id="primary" bind:hasChosed="Chosed" showWarning="{{_showWarning}}" anotherList="{{anotherList}}" userInfo="{{userInfo}}" bindsync="sync"></primary><!--组件内的方法对应于该组件-->
+  </swiper-item>
+  <swiper-item>
+    <!--感觉传这么多的数据,应该使用对象,但是我实在懒得改了,一团糟,就这样吧-->
+    <secondary bind:chosedList="ChosedList" chosedObjects="{{chosedObjects}}" showWarning="{{showWarning}}"
+      chosedList="{{chosedList}}" secArr="{{secArr}}" primary="{{userInfo[1].primary}}"></secondary>
+  </swiper-item>
+  <swiper-item>
+    <knowledge id="knowledge" userInfo="{{userInfo}}" bindsync="sync"></knowledge>
+  </swiper-item>
+  <swiper-item>
+    <interview id="interview" interview="{{interview}}" userInfo="{{userInfo}}" bindsync="sync" bindsyncInterviewMsg="syncInterviewMsg"></interview>
+  </swiper-item>
+  <swiper-item>
+    <checkInfo id="checkInfo" userInfo="{{userInfo}}" detailedMsg="{{detailedMsg}}"></checkInfo>
+  </swiper-item>
+</swiper>

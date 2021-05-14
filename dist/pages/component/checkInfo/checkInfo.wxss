@@ -1,0 +1,119 @@
+/* pages/component/checkInfo/checkInfo.wxss */
+@import "/img/img.wxss";
+@import "/font/font.wxss";
+
+.checkBox {
+  width: 100%;
+  height: 700rpx;
+  position: absolute;
+  top: 23%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  font-family: "FZXS16";
+  font-size: 30rpx;
+  margin-top: 10rpx;
+}
+.border {
+  background-size: 100% 100%;
+  width: 200rpx;
+  height: 80rpx;
+}
+.border2 {
+  background-size: 100% 100%;
+  width: 495rpx;
+  height: 80rpx;
+}
+.border, .border2{
+  font-size: 26rpx;
+  line-height: 80rpx;
+  text-align: left;
+  padding-left: 15rpx;
+  padding-top: 10rpx;
+}
+.item {
+  display: flex;
+  height: 80rpx;
+  align-items: center;
+  font-size: 36rpx;
+}
+.button {
+  background-size: 100% 100%;
+  width: 110rpx;
+  height: 95rpx;
+  position: absolute;
+  bottom: 6%;
+  right: 140rpx;
+}
+.email {
+  font-size: 19rpx;
+}
+.border2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*布局分成四个盒子*/
+.box1 {
+  width: 580rpx;
+  height: 270rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.box2 {
+  width: 700rpx;
+  height: 90rpx;
+  display: flex;
+}
+.box3 {
+  width: 580rpx;
+  height: 170rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.box4 {
+  width: 580rpx;
+  height: 180rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/*border的转换*/
+.longtextBorder {
+  position: absolute;
+  background-size: 100% 100%;
+  width: 500rpx;
+  height: 215rpx;
+  margin-top: 60rpx;
+  padding-top: 110rpx;
+  padding-left: 23rpx;
+  padding-right: 20rpx;
+  left: 12%;
+  font-size: 20rpx;
+}
+.backText {
+  cursor: pointer;
+  position: absolute;
+  font-size: 30rpx;
+  bottom: 10%;
+  right: 8%;
+}
+.confirmButton {
+  animation: confirm-button 2s cubic-bezier(.67,.01,.38,1) infinite;
+}
+@keyframes confirm-button {
+  0% {
+    transform: scale(1);
+  }
+  45% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

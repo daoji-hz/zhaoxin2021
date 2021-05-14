@@ -1,0 +1,72 @@
+<!--pages/component/checkInfo/checkInfo.wxml-->
+<view class="checkInfo,backgroundImg">
+  <view class="checkBox">
+    <view class="box1">
+      <view class="item">
+        <view class="title">姓名</view>
+        <view class="border inputBorder1">{{inUserInfo[0].name}}</view>
+      </view>
+      <view class="item">
+        <view class="title">班级</view>
+        <view class="border inputBorder1">{{inUserInfo[0].class}}</view>
+      </view>
+      <view class="item">
+        <view class="title">学号</view>
+        <view class="border inputBorder1">{{inUserInfo[0].studentID}}</view>
+      </view>
+      <view class="item">
+        <view class="title">手机</view>
+        <view class="border inputBorder1">{{inUserInfo[0].telephone}}</view>
+      </view>
+      <view class="item">
+        <view class="title">邮箱</view>
+        <view class="border inputBorder1 email">{{inUserInfo[0].email}}</view>
+      </view>
+    </view>
+    <view class="box2">
+      <view class="item">
+        <view class="title">主选部门</view>
+        <view class="border inputBorder1" data-text="{{_detailedMsg.primary}}">{{_detailedMsg.primary}}</view>
+      </view>
+      <view class="item">
+        <view class="title">意向部门</view>
+        <view class="border inputBorder1" style="font-size: {{_detailedMsg.fontsize}}">{{inUserInfo[1].secondary}}</view>
+      </view>
+    </view>
+    <view class="box3">
+      <view class="item">
+        <view class="title">已会</view>
+        <view class="border2 inputBorder2" bindtap="showLearnText" hidden="{{isShowLearnText}}">{{inUserInfo[2].learn}}</view>
+        <view class="longtextBorder inputBorder2" hidden="{{!isShowLearnText}}">{{inUserInfo[2].learn}}
+          <text class="backText" bindtap="backText">收起</text>
+        </view>
+      </view>
+      <view class="item">
+        <view class="title">想学</view>
+        <view class="border2 inputBorder2" bindtap="showWantText" hidden="{{isShowWantText}}">{{inUserInfo[2].want}}</view>
+        <view class="longtextBorder inputBorder2" hidden="{{!isShowWantText}}">{{inUserInfo[2].want}}
+          <text class="backText" bindtap="backWantText">收起</text>
+        </view>
+      </view>
+    </view>
+    <view class="box4">
+      <view class="item">
+        <view class="title">校区</view>
+        <view class="border inputBorder1">{{_detailedMsg.campus}}</view>
+      </view>
+      <view class="item">
+        <view class="title">日期</view>
+        <view class="border inputBorder1">{{_detailedMsg.date_time_place.date}}</view>
+      </view>
+      <view class="item">
+        <view class="title">时间</view>
+        <view class="border inputBorder1">{{_detailedMsg.date_time_place.time}}</view>
+      </view>
+      <view class="item">
+        <view class="title">地点</view>
+        <view class="border inputBorder1">{{_detailedMsg.date_time_place.place}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="confirmButton button" bindtap="sendRequest"></view>
+</view>

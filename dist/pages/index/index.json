@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "home": "/pages/component/home/home",
+    "basicInfo": "/pages/component/basicInfo/basicInfo",
+    "primary": "/pages/component/primary/primary",
+    "secondary": "/pages/component/secondary/secondary",
+    "knowledge": "/pages/component/knowledge/knowledge",
+    "interview": "/pages/component/interview/interview",
+    "checkInfo": "/pages/component/checkInfo/checkInfo"
+  }
+}

@@ -1,0 +1,40 @@
+<!--pages/component/knowledge/knowledge.wxml-->
+<view class="knowledge,backgroundImg">
+  <view class="Hi">
+    <image class="HiImg" src="{{src}}"></image>
+  </view>
+  <view class="text">
+    <text class="basicText">知识和技能</text>
+  </view>
+  <view class="learnAndWant">
+    <block>
+      <view class="Box">
+        <view class="learning,learningImg">
+          <text class="inputText">已会:</text>
+          <view class="writingVal" hidden="{{!writing}}" bindtap="changeType">{{writingVal}}</view>
+          <!--上面的是虚拟文本,下面是填写的时候出现的textarea区域-->
+          <view class="writeInfo" hidden="{{writing}}">
+            <textarea class="writing" bindblur="isWriting" bindlinechange="isLineChange" focus="{{!writing}}"
+              value="{{textareaVal}}" adjust-position="true">
+            </textarea>
+          </view>
+        </view>
+        <text class="warning-div">{{warningMsg}}</text>    
+      </view>
+    </block>
+    <block>
+      <view class="Box">
+        <view class="wanting,wantingImg">
+          <text class="inputText">想学:</text>
+          <view class="writingVal" hidden="{{!wanting}}" bindtap="changeWantingType">{{wantingVal}}</view>
+          <!--上面的是虚拟文本,下面是填写的时候出现的textarea区域-->
+          <view class="writeInfo" hidden="{{wanting}}">
+            <textarea class="writing" bindblur="isWanting" adjust-position="true" bindlinechange="wantingLineChange" focus="{{!wanting}}"
+             value="{{wantingTextareaVal}}"></textarea>
+          </view>        
+        </view>
+        <text class="warning-div">{{warningMsg2}}</text>
+      </view>
+    </block>
+  </view>
+</view>

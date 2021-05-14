@@ -1,0 +1,27 @@
+<!--pages/component/primary/primary.wxml-->
+<view class="primary,backgroundImg">
+   <view class="text">
+    <text class="basicText">主选部门</text>
+    <text class="reminder">(主选部门只能选一个哦)</text>
+  </view>
+  <view class="outBox">
+    <view class="primaryChoice">
+      <view class="art,Choice,{{index==0?'active':''}}" data-num="0" bindtap="chooseDepartment">
+        <view class="chosedArrow" hidden="{{index!=0}}"></view>
+      </view>
+      <view class="tech,Choice,{{index==1?'active':''}}" data-num="1" bindtap="chooseDepartment">
+        <view class="chosedArrow" hidden="{{index!=1}}"></view>
+      </view>
+      <view class="video,Choice,{{index==2?'active':''}}" data-num="2" bindtap="chooseDepartment">
+        <view class="chosedArrow" hidden="{{index!=2}}"></view>
+      </view>
+      <view class="media,Choice,{{index==3?'active':''}}" data-num="3" bindtap="chooseDepartment">
+        <view class="chosedArrow" hidden="{{index!=3}}"></view>
+      </view>
+    </view>
+  </view>
+  <view class="warning" style="color: {{color}}">
+    <view class="showWarning"  hidden="{{showWarning}}">{{warningMsg}}</view>
+    <view class="showWarning2" hidden="{{showWarning}}">{{warningMsg2}}</view>
+  </view>
+</view>

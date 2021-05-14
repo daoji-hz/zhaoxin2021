@@ -1,0 +1,61 @@
+<!--pages/component/interview/interview.wxml-->
+<view class="interview,backgroundImg">
+  <view class="face">
+    <image src="{{faceImg}}"></image>
+  </view>
+  <view class="text">
+    <text class="basicText">选择面试时间段</text>
+    <text class="reminder">(请从校区开始选择哦)</text>
+  </view>
+  <view class="Box">
+    <view class="ladder"></view>
+    <view class="inputBox">
+      <view class="pickerBox,interviewInputImg">
+        <picker bindchange="campusChange" value="{{index}}" range="{{campusArray}}"> 
+        <!--picker选择器的点击区域是根据里面嵌套的内容宽高决定的,只放一个图片会不好调整大小,所以在图片的外面嵌套一个view-->
+          <view class="littleArrow">
+            <image src="{{src}}"></image>
+          </view>
+        </picker>
+        <view class="showMsg">
+          {{campusArray[index]}}
+        </view>
+        <view class="choiceMsg">{{choiceMsg[0]}}</view>
+      </view>
+      <view class="pickerBox,interviewInputImg">
+        <picker bindchange="dateChange" value="{{dateIndex}}" range="{{dateArray}}" range-key="interviewDate">
+          <view class="littleArrow">
+            <image src="{{src}}"></image>
+          </view>
+        </picker>
+        <view class="showMsg">
+          {{dateArray[dateIndex].interviewDate}}
+        </view>
+        <view class="choiceMsg">{{choiceMsg[1]}}</view>
+      </view>
+      <view class="pickerBox,interviewInputImg">
+        <picker bindchange="timeChange" value="{{timeIndex}}" range="{{timeArray}}" range-key="interviewTime">
+          <view class="littleArrow">
+            <image src="{{src}}"></image>
+          </view>
+        </picker>
+        <view class="showMsg">
+          {{timeArray[timeIndex].interviewTime}}
+        </view>
+        <view class="choiceMsg">{{choiceMsg[2]}}</view>
+      </view>
+      <view class="pickerBox,interviewInputImg">
+        <picker bindchange="placeChange" value="placeIndex" range="{{placeArray}}" range-key="place.location">
+          <view class="littleArrow">
+            <image src="{{src}}"></image>
+          </view>
+        </picker>
+        <view class="showMsg">
+          <!--当对象某个属性的key中有.或其他符号时，不要使用obj.key的方式来读取值，可采用obj[key] 其中的key为字符串-->
+          {{placeArray[placeIndex]['place.location']}}
+        </view>
+        <view class="choiceMsg">{{choiceMsg[3]}}</view>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,84 @@
+/* pages/component/primary/primary.wxss */
+@import "/img/img.wxss";
+@import "/font/font.wxss";
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.outBox {
+  width: 100%;
+  height: 320rpx;
+  position: absolute;
+  top: 48%;
+  display: flex;
+  justify-content: center;
+}
+.primaryChoice {
+  width: 560rpx;
+  height: 380rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.Choice {
+  background-size: 100% 100%;
+  width: 250rpx;
+  height: 180rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.warning {
+  position: absolute;
+  top: 85%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.showWarning,.showWarning2 {
+  font-size: 28rpx;
+  font-weight: bold;
+  width: 500rpx;
+  text-align: center;
+  letter-spacing: 2rpx;
+  font-family: "FZXS16";
+}
+.showWarning2 {
+  margin-top: 20rpx;
+  font-size: 35rpx;
+}
+.chosedArrow {
+  background-size: 100% 100%;
+  height: 50rpx;
+  width: 50rpx;
+}
+.active {
+  animation: active 1.3s cubic-bezier(.67,.01,.38,1) both;
+}
+@keyframes active {
+  0% {
+    opacity: 0;
+    transform: rotateX(50deg);
+  }
+  70% {
+    transform: rotateX(-12deg);
+  }
+  80% {
+    transform: rotateX(10deg);
+  }
+  90% {
+    transform: rotateX(-8deg);
+  }
+  95% {
+    transform: rotateX(6deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0);
+  }
+}

@@ -1,0 +1,47 @@
+/* pages/component/basicInfo/basicInfo.wxss */
+@import "/img/img.wxss";
+@import "/font/font.wxss";
+
+.text {
+    top: 31%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.reminder {
+    font-size: 26rpx;
+    margin-top: 6rpx;
+}
+.info {
+    width: 600rpx;
+    height: 600rpx;
+    position: absolute;
+    top: 45%;
+    margin-left: 95rpx;
+    padding-top: 10rpx;
+    padding-left: 15rpx;
+}
+.nameInfo,.classInfo,.studentID,.phoneInfo,.emailInfo {
+    display: flex;
+    flex-direction: row;
+    height: 70rpx;
+    line-height: 70rpx;
+}
+.infoText {
+    font-size: 38rpx;
+    font-family: 'FZXS16';
+}
+.inputBorder {
+    width: 400rpx;
+    height: 60rpx;
+    border-bottom: 4rpx dashed #030303;
+    font-size: 35rpx;
+}
+.warningText {
+    color: rgba(255, 0, 0, 1);
+    font-size: 28rpx;
+    padding-left: 14rpx;
+    padding-top: 10rpx;
+    letter-spacing: 2rpx;
+    font-family: 'FZXS16';
+}

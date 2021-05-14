@@ -1,0 +1,45 @@
+<!--pages/component/basicInfo/basicInfo.wxml-->
+<view class="basicInfo,backgroundImg">
+
+		<view class="text">
+			<text class="basicText">基本信息</text>
+			<text class="reminder">(请一定要先填对学号哦)</text>
+	</view>
+	<view class="info">
+		<block>
+			<view class="studentID">
+				<text class="infoText">学号：</text>
+				<input class="inputBorder" type="text" value="{{inUserInfo[0].studentID}}" bindblur="getStudentID"></input>
+			</view>
+			<text class="warningText">{{studentIDmsg}}</text>
+		</block>
+		<block>
+			<view class="nameInfo">
+				<text class="infoText">姓名：</text>
+				<input class="inputBorder" type="text" value="{{inUserInfo[0].name}}" bindblur="getName"></input>
+			</view>
+			<text class="warningText">{{namemsg}}</text>
+		</block>
+		<block>
+			<view class="classInfo">
+				<text class="infoText">班级：</text>
+				<input class="inputBorder" type="text" value="{{inUserInfo[0].class}}" bindblur="getClass"></input>
+			</view>
+			<text class="warningText">{{classmsg}}</text>
+		</block>
+		<block>
+			<view class="phoneInfo">
+				<text class="infoText">手机：</text>
+				<input class="inputBorder" type="number" value="{{inUserInfo[0].telephone}}" bindblur="getPhone"></input>
+			</view>
+			<text class="warningText">{{phonemsg}}</text>
+		</block>
+		<block>
+			<view class="emailInfo">
+				<text class="infoText">邮箱：</text>
+				<input class="inputBorder" type="text" value="{{inUserInfo[0].email}}" bindblur="getEmail"></input>
+			</view>
+			<text class="warningText">{{emailmsg}}</text>
+		</block>
+	</view>
+</view>
